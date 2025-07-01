@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1376</width>
+    <height>895</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>561</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="APIbtn">
+       <property name="text">
+        <string>업비트 API키 입력</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Startbtn">
+       <property name="text">
+        <string>자동매매 시작</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Stopbtn">
+       <property name="text">
+        <string>자동매매 종료</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="Virtual">
+       <property name="text">
+        <string>모의투자</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTableWidget" name="CoinList">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>310</y>
+      <width>551</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>종목명</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>현재가</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>등락률</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>평가손익</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>수익률</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QWebEngineView" name="CandleChart" native="true">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>90</y>
+      <width>681</width>
+      <height>591</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>700</y>
+      <width>771</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>보유한 코인 목록</string>
+    </property>
+    <widget class="QTableWidget" name="Cointable">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>621</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <column>
+      <property name="text">
+       <string>종목명</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>현재가</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>등락률</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>평가손익</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>수익률</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>보유량</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QPushButton" name="Resetbtn_2">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>20</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>새로고침</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="Resetbtn">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>310</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>새로고침</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="RealCoin">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>51</y>
+      <width>301</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <row>
+     <property name="text">
+      <string>보유금액</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>구매금액</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>총 손익 금액</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>총 수익률</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>총 평가금액</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>추정예탁자산</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>실현 손익</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>값</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QTableWidget" name="VirtualCoin">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>50</y>
+      <width>291</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <row>
+     <property name="text">
+      <string>보유금액</string>
+     </property>
+     <property name="background">
+      <color alpha="0">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>구매금액</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>총 손익 금액</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>총 수익률</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>총 평가금액</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>추정예탁자산</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>실현 손익</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>값</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPlainTextEdit" name="Datalog">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>720</y>
+      <width>401</width>
+      <height>131</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="datalog">
+    <property name="geometry">
+     <rect>
+      <x>957</x>
+      <y>700</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>데이터 로그</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="stoplossbox">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>390</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="profitbox">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>420</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="stoploss">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>390</y>
+      <width>56</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>손절가</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="profit">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>420</y>
+      <width>56</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>익절가</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Insertcoin">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>39</y>
+      <width>113</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>구매 금액 입력</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Insert">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>42</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>구매</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Sell">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>42</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>판매</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Search">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>340</y>
+      <width>56</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="SearchInput">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>360</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="settingbtn">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>450</y>
+      <width>41</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>설정</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="nextBtn">
+    <property name="geometry">
+     <rect>
+      <x>514</x>
+      <y>660</y>
+      <width>41</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>다음</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="previousBtn">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>660</y>
+      <width>41</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>이전</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebEngineView</class>
+   <extends>QWidget</extends>
+   <header>qwebengineview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
