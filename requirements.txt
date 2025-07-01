@@ -1,0 +1,8 @@
+pyupbit
+PyQt5
+PyQtWebEngine
+pandas
+plotly
+scikit-learn
+tensorflow
+python-dotenv
